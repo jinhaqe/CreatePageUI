@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .box {
+        border: 1px solid black;
+        width: 370px;
+        padding: 20px;
+        overflow: hidden; /* float으로 인한 부모의 크기 문제 해결 */
+      }
+
+      #name {
+        margin-left: 10px;
+        margin-top: 10px;
+        margin-bottom: 40px;
+      }
+
+      span {
+        margin: 20px;
+        float: left; /* 기본적으로 왼쪽에 배치 */
+      }
+
+      span:nth-child(even) {
+        float: right; /* 짝수번째는 오른쪽에 배치 */
+      }
+
+      hr {
+        width: 100%;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <h2 id="name">캣삐</h2>
+      <hr />
+      <div class="info">
+        <span>담당 멤버</span>
+        <span>성호</span>
+        <hr />
+        <span>종류</span>
+        <span>고양이</span>
+        <hr />
+        <span>취미</span>
+        <span>미식, 슈퍼스타</span>
+        <hr />
+        <span>MBTI</span>
+        <span>STAR</span>
+        <hr />
+        <span>성격</span>
+        <span>예민해 보여도 스윗함, 츤데레</span>
+        <hr />
+        <span>마이크, 나를 비추는 조명</span>
+        <span>애착 아이템</span>
+      </div>
+    </div>
+  </body>
+</html>

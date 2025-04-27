@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>웹 페이지 레이아웃</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div id="title">
+        <h1>BBNEXDO</h1>
+        <h2>Who’s there? BBNEXDO!</h2>
+      </div>
+
+      <nav id="menu_gnb">
+        <ul>
+          <li><img src="./img/11.jpg" alt="Logo" /></li>
+          <li>CATBBI</li>
+          <li>DALRING</li>
+          <li>MYNGMYNG</li>
+          <li>HANTATPUNG</li>
+          <li>312</li>
+          <li>WOONBABY</li>
+        </ul>
+      </nav>
+    </header>
+
+    <div id="contents" class="section">
+      <section>
+        <h1>Who’s there? BBNEXDO!</h1>
+        <div class="article-container">
+          <article
+            data-name="캣삐"
+            data-image="./img/catppi.png"
+            data-description="캣삐는 귀여운 고양이 캐릭터입니다."
+          >
+            <img src="./img/catppi.png" class="BBNEXDO" alt="캣삐" />
+            <p>CATBBI</p>
+          </article>
+
+          <article data-name="달링" data-image="./img/DALRING.png">
+            <img src="./img/DALRING.png" class="BBNEXDO" alt="달링" />
+            <p>DALRING</p>
+          </article>
+
+          <article data-name="명명" data-image="./img/MYNGMYNG.png">
+            <img src="./img/MYNGMYNG.png" class="BBNEXDO" alt="명명" />
+            <p>MYNGMYNG</p>
+          </article>
+
+          <article data-name="한탯풍" data-image="./img/HAN TATPUNG.png">
+            <img src="./img/HAN TATPUNG.png" class="BBNEXDO" alt="한탯풍" />
+            <p>HANTATPUNG</p>
+          </article>
+
+          <article data-name="312" data-image="./img/312.png">
+            <img src="./img/312.png" class="BBNEXDO" alt="삼한이" />
+            <p>312</p>
+          </article>
+
+          <article data-name="운아기" data-image="./img/WOONBABY.png">
+            <img src="./img/WOONBABY.png" class="BBNEXDO" alt="운아기" />
+            <p>WOONBABY</p>
+          </article>
+        </div>
+      </section>
+      <div class="cute">
+        <img
+          src="./img/img.png"
+          alt="img"
+          style="width: 100%; height: auto; display: block; margin: 0"
+        />
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="box">
+          <h2 id="name">캣삐</h2>
+          <hr />
+          <div class="info">
+            <span class="odd">담당 멤버</span>
+            <span class="even">성호</span>
+            <hr />
+            <span class="odd">취미</span>
+            <span class="even">미식, 슈퍼스타</span>
+            <hr />
+            <span class="odd">MBTI</span>
+            <span class="even">STAR</span>
+            <hr />
+            <span class="odd">성격</span>
+            <span class="even">예민해 보여도 스윗함, 츤데레</span>
+            <hr />
+            <span class="odd">애착 아이템</span>
+            <span class="even">마이크, 나를 비추는 조명</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-left">
+        <img src="./img/logo.jpg" alt="Footer Logo" />
+      </div>
+      <p>&copy; 2025 BBNEXDO. All rights reserved.</p>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>

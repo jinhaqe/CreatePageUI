@@ -1,0 +1,322 @@
+* {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+@font-face {
+  font-family: "Cafe24Decoshadow";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2405-3@1.1/Cafe24Decoshadow.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-family: "Ownglyph_ParkDaHyun";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2411-3@1.0/Ownglyph_ParkDaHyun.woff2")
+    format("woff2");
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  background-color: rgb(129, 109, 101);
+}
+
+header {
+  background-color: rgb(255, 255, 255);
+  height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  background-image: url("./img/Untitled-2.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#title {
+  color: white;
+  text-align: center;
+  animation: fadeIn 2s ease-out;
+}
+
+#title > h1 {
+  font-size: 4rem;
+  margin: 0;
+  letter-spacing: 5px;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 3px 3px 3px rgba(19, 12, 3, 0.5);
+  animation: slideIn 2s ease-out;
+  font-family: "Cafe24Decoshadow";
+}
+
+#title > h2 {
+  font-size: 2rem;
+  margin-top: 10px;
+  color: #ffffff;
+  letter-spacing: 3px;
+  animation: slideIn 3s ease-out;
+  font-family: "Ownglyph_ParkDaHyun";
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+#menu_gnb {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 20px;
+  z-index: 1000;
+  display: flex;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease;
+}
+
+#menu_gnb ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+ul > li {
+  padding: 3px 10px;
+  font-weight: 400;
+  line-height: 28px;
+  border-radius: 10px;
+  color: white;
+  margin: 0 10px;
+}
+
+ul > li:hover {
+  background-color: rgb(103, 141, 156);
+  color: white;
+  cursor: pointer;
+}
+
+ul > li:first-child {
+  background-color: transparent !important; /* hover 효과를 없애기 위해 */
+}
+
+img {
+  width: 120px;
+  height: 50px;
+}
+
+#contents {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  padding: 30px;
+  background-color: rgb(255, 241, 223);
+  border-radius: 20px;
+}
+
+section > h1 {
+  text-align: center;
+  font-size: 40px;
+  color: rgb(0, 0, 0);
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.article-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  width: 100%;
+  max-width: calc(100% - 60px);
+  margin: 0 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  box-sizing: border-box;
+}
+
+article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 400px;
+  width: 300px;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: white;
+  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+article p {
+  font-family: "Ownglyph_ParkDaHyun";
+  font-size: 20px;
+}
+
+.BBNEXDO {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.back {
+  font-size: 24px;
+  color: rgb(56, 47, 40);
+  font-family: "Ownglyph_ParkDaHyun", sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+
+footer {
+  background-color: rgb(56, 47, 40);
+  height: 80px;
+  width: 100%;
+  color: white;
+  margin: 0 auto;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+}
+
+.modal-content {
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 10px;
+  width: 500px;
+  max-width: 100%;
+  position: relative;
+}
+
+.modal img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: red;
+}
+
+.box {
+  border: 1px solid black;
+  width: 370px;
+  padding: 20px;
+  overflow: hidden;
+}
+
+#name {
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  font-family: "Ownglyph_ParkDaHyun";
+  font-size: 30px;
+}
+
+.info span {
+  display: block; /* 각 span이 개별 블록처럼 행동하도록 설정 */
+  margin: 10px 0; /* 간격을 두기 위해 추가 */
+  font-size: 20px;
+}
+
+.odd {
+  text-align: left; /* 왼쪽 정렬 */
+  font-family: "Ownglyph_ParkDaHyun";
+}
+
+.even {
+  text-align: right; /* 오른쪽 정렬 */
+  font-family: "Ownglyph_ParkDaHyun";
+}
+
+hr {
+  width: 100%;
+}
+
+footer {
+  background-color: rgb(87, 62, 51);
+  height: 80px;
+  width: 100%;
+  padding: 20px;
+  color: white;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+footer .footer-left {
+  position: absolute;
+  left: 20px;
+}
+
+footer .footer-left img {
+  height: 70px;
+  width: 120px;
+}
+
+footer p {
+  text-align: center;
+  font-family: "Ownglyph_ParkDaHyun";
+  font-size: 18px;
+}
